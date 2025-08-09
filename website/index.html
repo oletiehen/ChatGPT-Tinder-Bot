@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olaf Tiehen | PrivatVerkauf-App</title>
+  <meta name="description" content="Die revolutionäre PrivatVerkauf-App von Olaf Tiehen." />
+  <meta property="og:title" content="Olaf Tiehen | PrivatVerkauf-App" />
+  <meta property="og:description" content="Verkaufen wie ein Profi, ohne Maklerprovision." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://pfst.cf2.poecdn.net/base/image/a1e0268be7deb16761ec5a166a6f10063ec0c9530b13d4ed7b0f00660afed220?w=800&h=533" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Olaf Tiehen | PrivatVerkauf-App" />
+  <meta name="twitter:description" content="Verkaufen wie ein Profi, ohne Maklerprovision." />
+  <meta name="twitter:image" content="https://pfst.cf2.poecdn.net/base/image/a1e0268be7deb16761ec5a166a6f10063ec0c9530b13d4ed7b0f00660afed220?w=800&h=533" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/styles.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body class="font-apple bg-white dark:bg-black text-apple-text dark:text-white overflow-x-hidden">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-blur" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
+      <a href="#home" class="flex items-center space-x-2">
+        <span class="w-12 h-12 bg-accent-gold rounded-xl flex items-center justify-center text-black font-bold">OT</span>
+        <span class="text-2xl font-bold">Olaf Tiehen</span>
+      </a>
+      <div class="hidden md:flex space-x-8" role="menubar">
+        <a href="#home" class="nav-link text-sm font-medium text-accent-gold border-b-2 border-accent-gold" role="menuitem">Home</a>
+        <a href="#app-features" class="nav-link text-sm font-medium text-apple-text-secondary" role="menuitem">Features</a>
+        <a href="#preise" class="nav-link text-sm font-medium text-apple-text-secondary" role="menuitem">Preise</a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button onclick="toggleDarkMode()" class="p-3 rounded-xl hover:bg-apple-gray dark:hover:bg-gray-800" aria-label="Dark mode umschalten">
+          <i data-feather="sun" class="h-6 w-6 dark:hidden"></i>
+          <i data-feather="moon" class="h-6 w-6 hidden dark:block"></i>
+        </button>
+        <button id="mobile-toggle" class="md:hidden p-3 rounded-xl hover:bg-apple-gray dark:hover:bg-gray-800" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen" onclick="toggleMobileMenu()">
+          <i data-feather="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-white dark:bg-black shadow-xl md:hidden z-50" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="p-6">
+        <button class="p-2 rounded-xl hover:bg-apple-gray dark:hover:bg-gray-800" onclick="toggleMobileMenu()" aria-label="Menü schließen">
+          <i data-feather="x" class="h-6 w-6"></i>
+        </button>
+        <div class="mt-8 space-y-6">
+          <a href="#home" class="block text-lg font-medium text-accent-gold nav-link">Home</a>
+          <a href="#app-features" class="block text-lg font-medium text-apple-text-secondary nav-link">Features</a>
+          <a href="#preise" class="block text-lg font-medium text-apple-text-secondary nav-link">Preise</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home" class="pt-20 hero-bg min-h-screen flex items-center justify-center">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-8">PrivatVerkauf-App</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-12">Preisfinder · 3D-Grundrisse · Poker-Negotiation · Avatar-Assistent</p>
+      <img src="https://pfst.cf2.poecdn.net/base/image/a1e0268be7deb16761ec5a166a6f10063ec0c9530b13d4ed7b0f00660afed220?w=800&h=533" alt="Avatar Onboarding Bildschirm" class="w-full max-w-2xl mx-auto rounded-3xl mb-12 apple-shadow-lg" loading="lazy" decoding="async" />
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <button onclick="scrollToSection('preise')" class="bg-accent-gold text-black px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 hover:scale-105">App kaufen</button>
+        <button onclick="scrollToSection('app-features')" class="border-2 border-accent-gold text-accent-gold px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200">Features entdecken</button>
+      </div>
+    </div>
+  </main>
+
+  <section id="app-features" class="py-24 bg-apple-gray dark:bg-black">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6">Revolutionäre <span class="text-accent-gold">App-Features</span></h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="feature-card clean-card p-8">
+          <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <i data-feather="user-check" class="h-8 w-8 text-gray-600 dark:text-gray-300"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Avatar-Onboarding</h3>
+          <p class="text-apple-text-secondary dark:text-gray-400">Digitaler Olaf führt Sie persönlich durch den Verkaufsprozess.</p>
+        </div>
+        <div class="feature-card glass-effect rounded-xl p-8">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <i data-feather="brain" class="h-8 w-8 text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">KI-Preisfinder</h3>
+          <p class="text-apple-text-secondary dark:text-gray-400">Analyse von 30+ Faktoren für den psychologisch optimalen Preis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preise" class="py-24 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6">App-Pakete & Preise</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="glass-effect rounded-xl p-8">
+          <h3 class="text-2xl font-bold mb-2">Basic</h3>
+          <div class="text-4xl font-bold text-accent-gold mb-2">297€</div>
+          <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold" onclick="showModal('Basic kaufen', 'Stripe-ID: price_olaf_basic_v1')">Basic kaufen</button>
+        </div>
+        <div class="glass-effect rounded-xl p-8 border-2 border-accent-gold">
+          <h3 class="text-2xl font-bold mb-2">Professional</h3>
+          <div class="text-4xl font-bold text-accent-gold mb-2">497€</div>
+          <button class="w-full bg-accent-gold hover:bg-yellow-500 text-black py-3 px-6 rounded-xl font-semibold" onclick="showModal('Professional kaufen', 'Stripe-ID: price_olaf_pro_v1')">Professional kaufen</button>
+        </div>
+        <div class="glass-effect rounded-xl p-8">
+          <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+          <div class="text-4xl font-bold text-accent-gold mb-2">997€</div>
+          <button class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-6 rounded-xl font-semibold" onclick="showModal('Enterprise kaufen', 'Stripe-ID: price_olaf_ent_v1')">Enterprise kaufen</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-primary-black text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gray-400 text-sm">© 2024 Olaf Tiehen - PrivatVerkauf-App. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>
